@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>6.c</title>
+</head>
+<body>
+  <p>
+    <button onclick="
+      let currentTime = new Date().toLocaleTimeString();
+      let timeArray = currentTime.split(':');
+      let hours = parseInt(timeArray[0]);
+      let period = timeArray[2].split(' ')[1]; 
+      let name = 'Harry';
+
+      if (period === 'AM' && hours < 12) {
+        alert(`Good Morning ${name}`);
+      }else if (period === 'PM' && hours === 7) {
+        alert(`IT\'S LAS VEGAS TIME ${name}!!!!!`);
+      } else if (period === 'PM' && hours < 5) {
+        alert(`Good Afternoon ${name}`);
+      } else {
+        alert(`Good Night ${name}`);
+      }
+    ">
+      Greetings!
+    </button>
+  </p>
+</body>
+</html>

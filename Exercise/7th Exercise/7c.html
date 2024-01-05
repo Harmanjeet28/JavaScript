@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>7.c</title>
+  </head>
+  <body>
+
+    <p>
+      Press this button to be greeted!
+      <button class='Greet' onclick="
+      userName = 'Harry';
+        greet();
+      ">
+        Greet
+      </button>
+    </p>
+
+    <script>
+
+      function greet(name){
+        if (name === undefined) {
+          console.log ('Hi there, How has your day been?');
+        }
+        else {
+          console.log(`Hi ${name}, How has your day been?`);
+        }
+      }
+
+    </script>
+  </body>
+</html>

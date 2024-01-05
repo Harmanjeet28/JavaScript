@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>5.j</title>
+  <body>
+
+    <p>
+      Coffee-Shop
+    </p>
+
+    <p>
+      Menu:
+    </p>
+
+    <p>
+      1. Coffee: $5
+    </p>
+
+    <p>
+      2. Bagel: $3
+    </p>
+
+    <p>
+      3. Soup: $9
+    </p>
+
+    <p>
+      Coffee Options
+    </p>
+
+    <button class="coffeeAdd" onclick="
+      console.log(`Cart Cost: ${cartCost += 5}`);
+      console.log(`Cart Quantity: ${cartQuantity += 1}`);
+      alert('One Coffee added to the cart');
+    ">
+      Add (1x)Coffee To cart
+    </button>
+
+    <button class="coffeeAdd4" onclick="
+      console.log(`Cart Cost: ${cartCost += 20}`);
+      console.log(`Cart Quantity: ${cartQuantity += 4}`);
+      alert('Four Coffee\'s added to the cart');
+    ">
+      Add (4x)Coffee To cart
+    </button>
+
+    <button class="coffeeAdd5" onclick="
+      console.log(`Cart Cost: ${cartCost += 25}`);
+      console.log(`Cart Quantity: ${cartQuantity += 5}`);
+      alert('Five Coffee\'s added to the cart');
+    ">
+      Add (5x)Coffee To cart
+    </button>
+
+    <button class="coffeeSub1" onclick="
+      console.log(`Cart Cost: ${cartCost -= 5}`);
+      console.log(`Cart Quantity: ${cartQuantity -= 1}`);
+      alert('One Coffee subtracted from the cart');
+    ">
+      Minus (1x)Coffee To cart
+    </button>
+
+    <button class="coffeeSub2" onclick="
+      console.log(`Cart Cost: ${cartCost -= 10}`);
+      console.log(`Cart Quantity: ${cartQuantity -= 2}`);
+      alert('Two Coffee\'s subtracted from the cart');
+    ">
+      Minus (2x)Coffee To cart
+    </button>
+
+    <button class="coffeeSub3" onclick="
+      console.log(`Cart Cost: ${cartCost -= 15}`);
+      console.log(`Cart Quantity: ${cartQuantity -= 3}`);
+      alert('Three Coffee\'s subtracted from the cart');
+    ">
+      Minus (3x)Coffee To cart
+    </button>
+
+    <p>
+        Bagel Options
+    </p>
+  
+    <button class="bagelAdd" onclick="
+      console.log(`Cart Cost: ${cartCost += 3}`);
+      console.log(`Cart Quantity: ${cartQuantity += 1}`);
+      alert('One Bagel added to the cart');
+    ">
+      Add (1x)Bagel To cart
+    </button>
+  
+    <button class="bagelAdd4" onclick="
+      console.log(`Cart Cost: ${cartCost += 12}`);
+      console.log(`Cart Quantity: ${cartQuantity += 4}`);
+      alert('Four Bagel\'s added to the cart');
+    ">
+      Add (4x)Bagel To cart
+    </button>
+
+    <button class="bagelAdd5" onclick="
+      console.log(`Cart Cost: ${cartCost += 15}`);
+      console.log(`Cart Quantity: ${cartQuantity += 5}`);
+      alert('Five Bagel\'s added to the cart');
+    ">
+      Add (5x)Bagel To cart
+    </button>
+  
+    <button class="bagleSub1" onclick="
+      console.log(`Cart Cost: ${cartCost -= 3}`);
+      console.log(`Cart Quantity: ${cartQuantity -= 1}`);
+      alert('One Bagle subtracted from the cart');
+    ">
+      Minus (1x)Bagle To cart
+    </button>
+
+    <button class="bagleSub2" onclick="
+      console.log(`Cart Cost: ${cartCost -= 6}`);
+      console.log(`Cart Quantity: ${cartQuantity -= 2}`);
+      alert('Two Bagle\'s subtracted from the cart');
+    ">
+      Minus (2x)Bagle To cart
+    </button>
+
+    <button class="bagleSub3" onclick="
+      console.log(`Cart Cost: ${cartCost -= 9}`);
+      console.log(`Cart Quantity: ${cartQuantity -= 3}`);
+      alert('Three Bagle\'s subtracted from the cart');
+    ">
+      Minus (3x)Bagle To cart
+    </button>
+
+    <p>
+        Soup Options
+    </p>
+  
+    <button class="soupAdd" onclick="
+      console.log(`Cart Cost: ${cartCost += 9}`);
+      console.log(`Cart Quantity: ${cartQuantity += 1}`);
+      alert('One Soup added to the cart');
+    ">
+      Add (1x)Soup To cart
+    </button>
+  
+    <button class="soupAdd4" onclick="
+      console.log(`Cart Cost: ${cartCost += 36}`);
+      console.log(`Cart Quantity: ${cartQuantity += 4}`);
+      alert('Four Soup\'s added to the cart');
+    ">
+      Add (4x)Soup To cart
+    </button>
+
+    <button class="soupAdd5" onclick="
+      console.log(`Cart Cost: ${cartCost += 45}`);
+      console.log(`Cart Quantity: ${cartQuantity += 5}`);
+      alert('Five Soup\'s added to the cart');
+    ">
+      Add (5x)Soup To cart
+    </button>
+  
+    <button class="soupSub1" onclick="
+      console.log(`Cart Cost: ${cartCost -= 9}`);
+      console.log(`Cart Quantity: ${cartQuantity -= 1}`);
+      alert('one Soup subtracted from the cart');
+    ">
+      Minus (1x)Soup To cart
+    </button>
+
+    <button class="soupSub2" onclick="
+      console.log(`Cart Cost: ${cartCost -= 18}`);
+      console.log(`Cart Quantity: ${cartQuantity -= 2}`);
+      alert('Two Soup\'s subtracted from the cart');
+    ">
+      Minus (2x)Soup To cart
+    </button>
+
+    <button class="soupSub3" onclick="
+      console.log(`Cart Cost: ${cartCost -= 27}`);
+      console.log(`Cart Quantity: ${cartQuantity -= 3}`);
+      alert('Three Soup\'s subtracted from the cart');
+    ">
+      Minus (3x)Soup To cart
+    </button>
+
+    <p>
+      Other Options
+    </p>
+
+    <button class="cartQuantity" onclick="
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    alert(`Cart Quantity: ${cartQuantity}`);
+    ">
+      Show Cart Quantity
+    </button>
+
+    <button class="cartCost" onclick="
+    console.log(`Cart Cost: ${'$' + cartCost}`);
+    alert(`Cart Cost: ${cartCost}`);
+    ">
+      Show Cart Cost
+    </button>
+
+    <button class="cartReset" onclick="
+    console.log(`Cart Cost: ${'$' + (cartCost = 0)}`);
+    console.log(`Cart Cost: ${cartQuantity = 0}`);
+    alert(`Cart Cost: ${cartCost}`);
+    alert(`Cart Cost: ${cartQuantity}`);
+    ">
+      Reset Cart
+    </button>
+
+    <p>
+      Proceed to checkout
+    </p>
+
+    <button class="totalTaxCost" onclick="
+    console.log('Tax(10%) = $' + (tax = cartCost * 0.1));
+    alert('$' + tax);
+    ">
+      Show Tax Cost
+    </button>
+
+    <button class="totalCost" onclick="
+    console.log(`Total Cost = $${totalCost = cartCost + tax}`);
+    alert('$' + totalCost);
+    ">
+      Show Total Cost
+    </button>
+
+
+
+    <script>
+
+      let cartQuantity = 0;
+      let cartCost = 0;
+      
+    </script>
+
+  </body>
+  </head>
+</html>

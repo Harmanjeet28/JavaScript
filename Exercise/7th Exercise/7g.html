@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>7.g</title>
+  </head>
+  <body>
+    <p>
+      <button class="number" onclick="addToCalculation('7');">7</button>
+      <button class="number" onclick="addToCalculation('8');">8</button>
+      <button class="number" onclick="addToCalculation('9');">9</button>
+    </p>
+    <p>
+      <button class="number" onclick="addToCalculation('4');">4</button>
+      <button class="number" onclick="addToCalculation('5');">5</button>
+      <button class="number" onclick="addToCalculation('6');">6</button>
+    </p>
+    <p>
+      <button class="number" onclick="addToCalculation('3');">3</button>
+      <button class="number" onclick="addToCalculation('2');">2</button>
+      <button class="number" onclick="addToCalculation('1');">1</button>
+    </p>
+    <button class="operation" onclick="addToCalculation(' + ');">+</button>
+    <button class="operation" onclick="calculateResult();">=</button>
+
+    <script>
+      let calculation = '';
+
+      function addToCalculation(value) {
+        calculation += value;
+        console.log(calculation);
+      }
+
+      function calculateResult() {
+        calculation = eval(calculation);
+        console.log(calculation);
+      }
+    </script>
+  </body>
+</html>

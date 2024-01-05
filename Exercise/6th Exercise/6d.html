@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title> 6.d </title>
+  </head>
+
+  <body>
+
+    <p>Amuesment Park</p>
+
+    <p>Select your Age!</p>
+
+    <button class="child" onclick="
+      let age = 6;
+      console.log(`current age is set to ${age}`);
+      if (age <= 6){
+      alert('you get a 10% Discount on your ticket!');
+    } else if (age > 6 || age < 65){
+      alert('Sorry, You dont qualify for a discount.');
+    } else if (age >= 65) {
+      alert('you get a 13% Discount on your ticket!');
+    }
+    ">
+      6 or younger
+    </button>
+
+    <button class="Normal" onclick="
+      let age = 64;
+      console.log(`current age is set to ${age}`);
+      if (age <= 6){
+      alert('you get a 10% Discount on your ticket!');
+    } else if (age > 6 || age < 65){
+      alert('Sorry, You dont qualify for a discount.');
+    } else if (age >= 65) {
+      alert('you get a 13% Discount on your ticket!');
+    }
+    ">
+      above 6 and younger than 65
+    </button>
+
+    <button class="Senior" onclick="
+      let age = 65;
+      console.log(`current age is set to ${age}`);
+      if (age <= 6){
+      alert('you get a 10% Discount on your ticket!');
+    } else if (age > 6 && age < 65){
+      alert('Sorry, You dont qualify for a discount.');
+    } else if (age >= 65) {
+      alert('you get a 13% Discount on your ticket!');
+    }
+    ">
+      65 or older
+    </button>
+
+  </body>
+
+</html>

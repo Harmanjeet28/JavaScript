@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>5.c</title>
+  <body>
+
+    <p>
+      Coffee-Shop
+    </p>
+
+    <p>
+      Menu:
+    </p>
+
+    <p>
+      1. Coffee: $5
+    </p>
+
+    <p>
+      2. Bagel: $3
+    </p>
+
+    <p>
+      3. Soup: $9
+    </p>
+
+    <button class="coffeeAdd" onclick="
+    console.log(`Cart Cost: ${cartCost += 5}`);
+    console.log(`Cart Quantity: ${cartQuantity += 1}`);
+    alert('One Coffee added to the cart');
+    ">
+      Add (1x)Coffee To cart
+    </button>
+
+    <button class="BagelAdd" onclick="
+    console.log(`Cart Cost: ${cartCost += 3}`);
+    console.log(`Cart Quantity: ${cartQuantity += 1}`);
+    alert('One Bagel added to the cart');
+    ">
+      Add (1x)Bagel To cart
+    </button>
+
+    <button class="SoupAdd" onclick="
+    console.log(`Cart Cost: ${cartCost += 9}`);
+    console.log(`Cart Quantity: ${cartQuantity += 1}`);
+    alert('One Soup added to the cart');
+    ">
+      Add (1x)Soup To cart
+    </button>
+
+    <button class="cartQuantity" onclick="
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    alert(`Cart Quantity: ${cartQuantity}`);
+    ">
+      Show Cart Quantity
+    </button>
+
+    <button class="cartCost" onclick="
+    console.log(`Cart Cost: ${'$' + cartCost}`);
+    alert(`Cart Cost: ${cartCost}`);
+    ">
+      Show Cart Cost
+    </button>
+
+    <button class="cartReset" onclick="
+    console.log(`Cart Cost: ${'$' + (cartCost = 0)}`);
+    console.log(`Cart Cost: ${cartQuantity = 0}`);
+    alert(`Cart Cost: ${cartCost}`);
+    alert(`Cart Cost: ${cartQuantity}`);
+    ">
+      Reset Cart
+    </button>
+
+    <script>
+
+      let cartQuantity = 0;
+      let cartCost = 0;
+      
+    </script>
+
+  </body>
+  </head>
+</html>

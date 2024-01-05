@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>7.f</title>
+  </head>
+  <body>
+
+    <p>
+      This Button converts Celsius to Fahrenheit : 
+      <button class="cToF" onclick="
+        cValue = -1;
+        cToF(cValue);
+      ">
+        C° to F°
+      </button>
+    </p>
+
+    <p>
+        This Button converts Fahrenheit to Celsius: 
+        <button class="fToC" onclick="
+          fValue = -1;
+          fToC(fValue);
+        ">
+          F° to C°
+        </button>
+    </p>
+
+    <p>
+        Self Determination: 
+        <button class="Auto" onclick="
+          value = -12;
+          unit = 'd';
+          autoDegree(value, unit);
+        ">
+          F° to C°
+        </button>
+    </p>
+
+    <script>
+
+      function cToF(fNumber) {
+        console.log(`Fahrenheit : ${(fNumber * 9/5) + 32}`)
+      }
+
+      function fToC(cNumber) {
+        console.log(`Celsius : ${(cNumber - 32) * 5/9}`)
+      }
+
+      function autoDegree(number, degree){
+        if (degree === 'c'){
+          console.log(`The Value in F° is : ${(number * 9/5) + 32}`)
+        }
+        else if(degree === 'f'){
+          console.log(`The Value in C° is : ${(number - 32) * 5/9}`);
+        }
+        else {
+          console.log('you can\'t make your own unit (Loser)');
+        }
+      }
+
+    </script>
+  </body>
+</html>

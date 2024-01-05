@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>6.j</title>
+</head>
+<body>
+  <script>
+    let random = Math.random();
+    console.log(`This is the random number ${random}`);
+
+    let result; 
+
+    if (random >= 0.5) {
+      result = 1;
+      console.log('Result of the coin flip is stored successfully');
+    } else {
+      result = 2;
+      console.log('Result of the coin flip is stored successfully');
+    }
+
+    console.log('Let\'s try to guess what it is, eh?');
+
+    let myGuess = 'heads';
+    let checker = 0;
+
+    if (myGuess === 'heads') {
+      checker = 1;
+    } else {
+      checker = 0;
+    }
+
+    if (checker === 1 && result === 1) {
+      console.log('Good picking! It was Heads!');
+    } else {
+      console.log('Sorry, but the coin flipped to Tails.');
+    }
+  </script>
+</body>
+</html>
