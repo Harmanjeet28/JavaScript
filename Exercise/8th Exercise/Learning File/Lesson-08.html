@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors 2.0</title>
+  </head>
+  <body>
+
+    <p>Rock Paper Scissors Game</p>
+
+    <button class="rock" onclick="game.play('rock')">Rock</button>
+    <button class="paper" onclick="game.play('paper')">Paper</button>
+    <button class="scissors" onclick="game.play('scissors')">Scissors</button>
+
+    <button class="showScore" onclick="game.showScore()">Show Score</button>
+    <button class="reset" onclick="game.resetScore()">Reset Score</button>
+    <button class="save" onclick="game.saveResults()">Save Results</button>
+
+    <script>
+      let game = {
+        computerInput: 0,
+        tieCount: 0,
+        winCount: 0,
+        lostCount: 0,
+
+        initializeGame() {
+          const savedData = localStorage.getItem('result');
+          if (savedData) {
+            const parsedData = JSON.parse(savedData);
+            this.computerInput = parsedData.computerInput;
+            this.tieCount = parsedData.tieCount;
+            this.winCount = parsedData.winCount;
+            this.lostCount = parsedData.lostCount;
+          } else {
+            this.computerInput = Math.random();
+          }
+        },
+
+        computerPick() {
+          this.computerInput = Math.random();
+          if (this.computerInput < 1/3) {
+            this.computerInput = 1; //rock
+          } else if (this.computerInput > 1/3 && this.computerInput < 2/3){
+            this.computerInput = 2; //paper
+          } else {
+            this.computerInput = 3; //scissors
+          }
+        },
+
+        play(userChoice) {
+          this.computerPick();
+
+          if (userChoice === 'rock'){
+            if (this.computerInput === 1){
+              alert('It\'s a Tie!');
+              this.tieCount++;
+            } else if (this.computerInput === 2){
+              alert('You Lose!');
+              this.lostCount++;
+            } else {
+              alert('You Win!');
+              this.winCount++;
+            }
+          } else if (userChoice === 'paper'){
+            if (this.computerInput === 1){
+              alert('You Win!');
+              this.winCount++;
+            } else if (this.computerInput === 2){
+              alert('It\'s a Tie!');
+              this.tieCount++;
+            } else {
+              alert('You Lose!');
+              this.lostCount++;
+            }
+          } else if (userChoice === 'scissors'){
+            if (this.computerInput === 1){
+              alert('You Lose!');
+              this.lostCount++;
+            } else if (this.computerInput === 2){
+              alert('You Win!');
+              this.winCount++;
+            } else {
+              alert('It\'s a Tie!');
+              this.tieCount++;
+            }
+          }
+
+          this.saveResults(); // Save the results after each play
+        },
+
+        showScore() {
+          console.log(`Wins: ${this.winCount} Loses: ${this.lostCount} Ties: ${this.tieCount}`);
+        },
+
+        resetScore() {
+          this.winCount = 0;
+          this.lostCount = 0;
+          this.tieCount = 0;
+          console.log('Score Has been Reset');
+          this.showScore();
+          this.saveResults(); // Save the results after resetting
+        },
+
+        saveResults() {
+          const jsonString = JSON.stringify(this);
+          localStorage.setItem('result', jsonString);
+        }
+      };
+
+      game.initializeGame(); // Initialize the game object
+
+    </script>
+
+  </body>
+</html>
